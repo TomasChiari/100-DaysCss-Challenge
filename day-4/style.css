@@ -1,0 +1,144 @@
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #585858; */
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.frame {
+    height: 400px;
+    width: 400px;
+
+    box-shadow: 5px 5px 15px #1f1f1f;
+    background-color: #f054d4;
+    border-radius: 20px;
+
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+.outer-circle {
+    height: 150px;
+    width: 150px;
+
+    box-shadow: 2px 2px 20px black;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 125px;
+    left: 125px;
+    z-index: 1;
+
+    animation: outer 7s ease-in-out infinite
+}
+
+.middle-circle {
+    height: 100px;
+    width: 100px;
+
+    box-shadow: 2px 2px 20px black;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 1;
+
+    animation: middle 7s ease-in-out infinite
+
+}
+
+.inner-circle {
+    height: 50px;
+    width: 50px;
+
+    box-shadow: 2px 2px 20px black;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 175px;
+    left: 175px;
+    z-index: 1;
+
+    animation: inner 7s ease-in-out infinite
+}
+
+@keyframes outer {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes middle {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(0);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes inner {
+    0% {
+        transform: scale(0);
+    }
+
+    30% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
