@@ -1,0 +1,113 @@
+*,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: grid;
+	place-content: center;
+
+	background-color: #585858;
+}
+
+.frame {
+	height: 500px;
+	width: 500px;
+
+	background-color: #141137;
+	border-radius: 15px;
+
+	box-shadow: 5px 5px 15px #151515;
+
+	display: grid;
+	place-content: center;
+}
+
+.circle {
+	height: 250px;
+	width: 250px;
+
+	overflow: hidden;
+
+	border-radius: 50%;
+	background-color: rgb(68, 147, 236);
+	box-shadow: 0px 0px 15px #151515;
+
+	position: relative;
+	animation: main-animation 4s infinite ease-in-out;
+}
+
+.sun-container {
+	height: 220px;
+	width: 220px;
+	/* box-shadow: 0px 0px 15px #000000; */
+	margin: 50px 15px;
+
+	animation: sun 4s infinite ease-in-out;
+}
+
+.sun {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: #ffee00;
+	box-shadow: 0px 0px 20px #d4ff00;
+}
+
+.piramid-left {
+	height: calc(57px * 120 / 100);
+	width: calc(116px * 120 / 100);
+	background: #f4f4f4;
+	clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+
+	position: absolute;
+	bottom: 75px;
+	left: 50px;
+}
+
+.piramid-rigth {
+	height: calc(57px * 120 / 100);
+	width: calc(58px * 120 / 100);
+	background: #dddada;
+	clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+
+	position: absolute;
+	bottom: 75px;
+	left: 119px;
+}
+
+.ground {
+	width: 250px;
+	height: 80px;
+
+	position: absolute;
+	bottom: 0px;
+
+	background-color: rgb(222, 173, 37);
+}
+
+@keyframes main-animation {
+	0% {
+		opacity: 1;
+	}
+
+	60% {
+		opacity: 0.6;
+	}
+
+	100% {
+		opacity: 0.1;
+	}
+}
+
+@keyframes sun {
+	0% {
+		transform: rotate(-65deg);
+	}
+	100% {
+		transform: rotate(165deg);
+	}
+}
